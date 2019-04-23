@@ -12,6 +12,8 @@
 		D04D682E226FB1D70071D43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D682C226FB1D70071D43F /* LaunchScreen.storyboard */; };
 		D04D683A226FB9840071D43F /* TestingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6839226FB9840071D43F /* TestingController.swift */; };
 		D04D683D226FBA840071D43F /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D683C226FBA840071D43F /* ReuseIdentifying.swift */; };
+		D04D683F226FBBD80071D43F /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D683E226FBBD80071D43F /* Pokemon.swift */; };
+		D04D6843226FC3760071D43F /* MiscExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6842226FC3760071D43F /* MiscExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D04D682F226FB1D70071D43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04D6839226FB9840071D43F /* TestingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingController.swift; sourceTree = "<group>"; };
 		D04D683C226FBA840071D43F /* ReuseIdentifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
+		D04D683E226FBBD80071D43F /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		D04D6842226FC3760071D43F /* MiscExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		D04D6836226FB9230071D43F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D04D683E226FBBD80071D43F /* Pokemon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D04D683C226FBA840071D43F /* ReuseIdentifying.swift */,
+				D04D6842226FC3760071D43F /* MiscExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -174,7 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04D6843226FC3760071D43F /* MiscExtensions.swift in Sources */,
 				D04D683A226FB9840071D43F /* TestingController.swift in Sources */,
+				D04D683F226FBBD80071D43F /* Pokemon.swift in Sources */,
 				D04D683D226FBA840071D43F /* ReuseIdentifying.swift in Sources */,
 				D04D6824226FB1D40071D43F /* AppDelegate.swift in Sources */,
 			);
