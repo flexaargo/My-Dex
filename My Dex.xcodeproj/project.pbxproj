@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		D04D6824226FB1D40071D43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6823226FB1D40071D43F /* AppDelegate.swift */; };
-		D04D6826226FB1D40071D43F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6825226FB1D40071D43F /* ViewController.swift */; };
-		D04D6829226FB1D40071D43F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D6827226FB1D40071D43F /* Main.storyboard */; };
 		D04D682B226FB1D70071D43F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04D682A226FB1D70071D43F /* Assets.xcassets */; };
 		D04D682E226FB1D70071D43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D682C226FB1D70071D43F /* LaunchScreen.storyboard */; };
+		D04D683A226FB9840071D43F /* TestingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6839226FB9840071D43F /* TestingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D04D6820226FB1D40071D43F /* My Dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04D6823226FB1D40071D43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D04D6825226FB1D40071D43F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D04D6828226FB1D40071D43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D04D682A226FB1D70071D43F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D04D682D226FB1D70071D43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D04D682F226FB1D70071D43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D04D6839226FB9840071D43F /* TestingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +53,44 @@
 			isa = PBXGroup;
 			children = (
 				D04D6823226FB1D40071D43F /* AppDelegate.swift */,
-				D04D6825226FB1D40071D43F /* ViewController.swift */,
-				D04D6827226FB1D40071D43F /* Main.storyboard */,
+				D04D6835226FB9150071D43F /* Controllers */,
+				D04D6837226FB92D0071D43F /* Views */,
+				D04D6836226FB9230071D43F /* Models */,
+				D04D6838226FB9460071D43F /* Supporting Files */,
+			);
+			path = "My Dex";
+			sourceTree = "<group>";
+		};
+		D04D6835226FB9150071D43F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D04D6839226FB9840071D43F /* TestingController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D04D6836226FB9230071D43F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D04D6837226FB92D0071D43F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D04D6838226FB9460071D43F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				D04D682A226FB1D70071D43F /* Assets.xcassets */,
 				D04D682C226FB1D70071D43F /* LaunchScreen.storyboard */,
 				D04D682F226FB1D70071D43F /* Info.plist */,
 			);
-			path = "My Dex";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +153,6 @@
 			files = (
 				D04D682E226FB1D70071D43F /* LaunchScreen.storyboard in Resources */,
 				D04D682B226FB1D70071D43F /* Assets.xcassets in Resources */,
-				D04D6829226FB1D40071D43F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D04D6826226FB1D40071D43F /* ViewController.swift in Sources */,
+				D04D683A226FB9840071D43F /* TestingController.swift in Sources */,
 				D04D6824226FB1D40071D43F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D04D6827226FB1D40071D43F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D04D6828226FB1D40071D43F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D04D682C226FB1D70071D43F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AEXVC7BMBG;
-				INFOPLIST_FILE = "My Dex/Info.plist";
+				INFOPLIST_FILE = "My Dex/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AEXVC7BMBG;
-				INFOPLIST_FILE = "My Dex/Info.plist";
+				INFOPLIST_FILE = "My Dex/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
