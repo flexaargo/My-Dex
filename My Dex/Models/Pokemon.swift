@@ -19,20 +19,27 @@ struct Pokemon {
 
 extension Pokemon: Decodable {
   enum CodingKeys: String, CodingKey {
-    case name
     case id
     case height
     case weight
-    case types
     // Nested array
+    case types
     enum TypeKeys: String, CodingKey {
       case type
+    }
+    // Nested object
+    case species
+    enum SpeciesKeys: String, CodingKey {
+      case name
     }
   }
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
-    self.name = try container.decode(String.self, forKey: .name)
+    
+    let speciesContainer = try container.nestedContainer(keyedBy: CodingKeys.SpeciesKeys.self, forKey: .species)
+    self.name = try speciesContainer.decode(String.self, forKey: .name)
+    
     self.id = try container.decode(Int.self, forKey: .id)
     self.height = try container.decode(Int.self, forKey: .height)
     self.weight = try container.decode(Int.self, forKey: .weight)

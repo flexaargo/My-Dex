@@ -30,5 +30,7 @@ private extension TestingController {
     pokedex.sort { (p1, p2) -> Bool in
       return p1.id < p2.id
     }
+    
+    pokedex.forEach({print("\($0.id.formattedPokemonId) - \($0.name.capitalized)")})
   }
 }
