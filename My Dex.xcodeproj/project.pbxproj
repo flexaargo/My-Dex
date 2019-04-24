@@ -15,6 +15,7 @@
 		D04D683F226FBBD80071D43F /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D683E226FBBD80071D43F /* Pokemon.swift */; };
 		D04D6843226FC3760071D43F /* MiscExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6842226FC3760071D43F /* MiscExtensions.swift */; };
 		D04D6846226FC60D0071D43F /* PokeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6845226FC60D0071D43F /* PokeApi.swift */; };
+		D04D6848227056650071D43F /* PokedexNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6847227056650071D43F /* PokedexNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D04D683E226FBBD80071D43F /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		D04D6842226FC3760071D43F /* MiscExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscExtensions.swift; sourceTree = "<group>"; };
 		D04D6845226FC60D0071D43F /* PokeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApi.swift; sourceTree = "<group>"; };
+		D04D6847227056650071D43F /* PokedexNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				D04D6839226FB9840071D43F /* TestingController.swift */,
+				D04D6847227056650071D43F /* PokedexNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D04D6843226FC3760071D43F /* MiscExtensions.swift in Sources */,
+				D04D6848227056650071D43F /* PokedexNavigationController.swift in Sources */,
 				D04D683A226FB9840071D43F /* TestingController.swift in Sources */,
 				D04D683F226FBBD80071D43F /* Pokemon.swift in Sources */,
 				D04D683D226FBA840071D43F /* ReuseIdentifying.swift in Sources */,

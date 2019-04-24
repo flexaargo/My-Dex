@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alex Fargo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: Pokemon Number Formatting
 extension Int {
@@ -37,4 +37,9 @@ extension PokeApiError: LocalizedError {
       return "Pokemon Id is out of bounds"
     }
   }
+}
+
+// MARK: Custom Colors
+extension UIColor {
+  static let primaryRed = UIColor(red: 0.91, green: 0.30, blue: 0.30, alpha: 1.00)
 }

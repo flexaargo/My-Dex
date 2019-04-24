@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     
     let testingController = TestingController()
-    let navigationController = UINavigationController(rootViewController: testingController)
+    let navigationController = PokedexNavigationController(rootViewController: testingController)
     
     window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
