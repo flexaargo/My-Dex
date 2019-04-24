@@ -18,6 +18,7 @@
 		D04D6848227056650071D43F /* PokedexNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6847227056650071D43F /* PokedexNavigationController.swift */; };
 		D04D684A22705A2F0071D43F /* PokedexCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D684922705A2F0071D43F /* PokedexCollectionController.swift */; };
 		D04D684C22705A9D0071D43F /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D684B22705A9D0071D43F /* BaseCollectionView.swift */; };
+		D04D684E22705B560071D43F /* PokedexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D684D22705B560071D43F /* PokedexCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D04D6847227056650071D43F /* PokedexNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexNavigationController.swift; sourceTree = "<group>"; };
 		D04D684922705A2F0071D43F /* PokedexCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCollectionController.swift; sourceTree = "<group>"; };
 		D04D684B22705A9D0071D43F /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		D04D684D22705B560071D43F /* PokedexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		D04D6837226FB92D0071D43F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D04D684D22705B560071D43F /* PokedexCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				D04D6848227056650071D43F /* PokedexNavigationController.swift in Sources */,
 				D04D683A226FB9840071D43F /* TestingController.swift in Sources */,
 				D04D683F226FBBD80071D43F /* Pokemon.swift in Sources */,
+				D04D684E22705B560071D43F /* PokedexCell.swift in Sources */,
 				D04D684A22705A2F0071D43F /* PokedexCollectionController.swift in Sources */,
 				D04D684C22705A9D0071D43F /* BaseCollectionView.swift in Sources */,
 				D04D683D226FBA840071D43F /* ReuseIdentifying.swift in Sources */,
