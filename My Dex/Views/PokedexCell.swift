@@ -17,6 +17,7 @@ class PokedexCell: UICollectionViewCell {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
+    backgroundColor = .cardBackground
   }
   
   required init?(coder aDecoder: NSCoder) {
