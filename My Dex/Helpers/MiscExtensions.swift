@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: Pokemon Number Formatting
 extension Int {
   var formattedPokemonId: String {
     return NumberFormatter.pokemonIdFormatter.string(from: self as NSNumber)!
@@ -22,4 +23,18 @@ extension NumberFormatter {
     nf.allowsFloats = false
     return nf
   }()
+}
+
+// MARK: Custom Errors
+enum PokeApiError: Error {
+  case pokemonOutOfBounds
+}
+
+extension PokeApiError: LocalizedError {
+  public var errorDescription: String? {
+    switch self {
+    case .pokemonOutOfBounds:
+      return "Pokemon Id is out of bounds"
+    }
+  }
 }
