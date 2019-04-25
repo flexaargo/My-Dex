@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PokedexCell: UICollectionViewCell {
   var pokemon: Pokemon! {
     didSet {
       nameLabel.text = pokemon.name.capitalized
       idLabel.text = "#\(pokemon.id.formattedPokemonId)"
+      imageView.sd_setImage(with: URL(string: pokemon.imageURL))
       if pokemon.types.count > 1 {
         type1Label.text = pokemon.types[1].name.capitalized
         type1Label.backgroundColor = pokemon.types[1].color
@@ -92,6 +94,7 @@ private extension PokedexCell {
     typeStackView.alignment = .center
     typeStackView.distribution = .fillEqually
     self.addSubview(imageBackground)
+    imageBackground.addSubview(imageView)
     self.addSubview(nameLabel)
     self.addSubview(idLabel)
     self.addSubview(typeStackView)
@@ -99,6 +102,7 @@ private extension PokedexCell {
                            bottom: nameLabel.topAnchor, trailing: self.trailingAnchor,
                            padding: .init(top: 6, left: 6, bottom: 4, right: 6))
     imageBackground.constrainHeightToWidth()
+    imageView.fillSuperview(padding: .init(top: 2, left: 2, bottom: 2, right: 2))
     nameLabel.anchor(top: imageBackground.bottomAnchor, leading: self.leadingAnchor,
                      bottom: idLabel.topAnchor, trailing: self.trailingAnchor,
                      padding: .init(top: 4, left: 6, bottom: 0, right: 6))
