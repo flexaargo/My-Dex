@@ -9,6 +9,10 @@
 import UIKit
 
 class PokedexCollectionController: BaseCollectionView {
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+  
   private let cvPadding: CGFloat = 16
   
   private var pokedexEntries = [Pokemon]()
@@ -22,6 +26,8 @@ class PokedexCollectionController: BaseCollectionView {
     return aiv
   }()
   
+  private let searchController = UISearchController(searchResultsController: nil)
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationItem.title = "My Dex"
@@ -31,6 +37,7 @@ class PokedexCollectionController: BaseCollectionView {
     view.addSubview(activityIndicatorView)
     activityIndicatorView.fillSuperview()
     fetchPokemon()
+    setupSearchBar()
   }
 }
 
@@ -48,6 +55,13 @@ private extension PokedexCollectionController {
       return p1.id < p2.id
     }
     collectionView.reloadData()
+  }
+  
+  func setupSearchBar() {
+    definesPresentationContext = true
+    searchController.searchBar.tintColor = .white
+    navigationItem.searchController = self.searchController
+    navigationItem.hidesSearchBarWhenScrolling = false
   }
 }
 
