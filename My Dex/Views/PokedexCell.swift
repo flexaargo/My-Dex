@@ -12,7 +12,7 @@ import SDWebImage
 class PokedexCell: UICollectionViewCell {
   var pokemon: Pokemon! {
     didSet {
-      print("\(pokemon.id.formattedPokemonId) - \(pokemon.name.capitalized)\t\t\(pokemon.types.count)")
+//      print("\(pokemon.id.formattedPokemonId) - \(pokemon.name.capitalized)\t\t\(pokemon.types.count)")
       imageView.sd_setImage(with: URL(string: pokemon.imageURL))
       nameLabel.text = pokemon.name.capitalized
       idLabel.text = "#\(pokemon.id.formattedPokemonId)"
