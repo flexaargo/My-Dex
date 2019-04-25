@@ -3,7 +3,7 @@
 
 Simple one page Pokédex that fetches the data from an API. You can search for Pokémon by name, id, or type. More functionality to come...?
 
-![Recording of My Dex](images/MyDex.gif =250x)
+![Recording of My Dex](images/MyDex.gif)
 
 ## Getting Started
 
