@@ -154,7 +154,14 @@ private extension PokedexCollectionController {
     }
     
     filteredPokedexEntries = pokedexEntries.filter({ (pokemon) -> Bool in
-      return pokemon.id.formattedPokemonId.contains(searchString) || pokemon.name.contains(searchString.lowercased())
+      var filtered = false
+      // For each type in types, check to see if the type name contains the search string
+      pokemon.types.forEach({filtered = filtered || $0.name.contains(searchString.lowercased())})
+      // Check to see if the id contains the search string
+      filtered = filtered || pokemon.id.formattedPokemonId.contains(searchString)
+      // Check to see if the name contains the search string
+      filtered = filtered || pokemon.name.contains(searchString.lowercased())
+      return filtered
     })
     
     filteredPokedexEntries.sort { (p1, p2) -> Bool in
