@@ -13,19 +13,31 @@ class PokedexCollectionController: BaseCollectionView {
   
   private var pokedexEntries = [Pokemon]()
   
+  private let activityIndicatorView: UIActivityIndicatorView = {
+    let aiv = UIActivityIndicatorView()
+    aiv.hidesWhenStopped = true
+    aiv.style = .whiteLarge
+    aiv.color = .primaryRed
+    aiv.startAnimating()
+    return aiv
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.title = "My Dex"
-    self.collectionView.backgroundColor = .white
-    self.collectionView.register(PokedexCell.self, forCellWithReuseIdentifier: PokedexCell.reuseIdentifier)
-    self.extendedLayoutIncludesOpaqueBars = true
-    self.fetchPokemon()
+    navigationItem.title = "My Dex"
+    collectionView.backgroundColor = .white
+    collectionView.register(PokedexCell.self, forCellWithReuseIdentifier: PokedexCell.reuseIdentifier)
+    extendedLayoutIncludesOpaqueBars = true
+    view.addSubview(activityIndicatorView)
+    activityIndicatorView.fillSuperview()
+    fetchPokemon()
   }
 }
 
 private extension PokedexCollectionController {
   func fetchPokemon() {
     PokeApi.shared.fetchPokemon(toId: PokeApi.shared.maxPokemonId) { (pokemon) in
+      self.activityIndicatorView.stopAnimating()
       self.pokedexEntries = pokemon
       self.fetchedPokemon()
     }
