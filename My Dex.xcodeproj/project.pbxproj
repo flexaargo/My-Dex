@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0389E75DE6F90FD99FFF316 /* Pods_My_Dex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8E38D592B13A4CE5514DFE /* Pods_My_Dex.framework */; };
 		D034FA4E22712671005F7D84 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034FA4D22712671005F7D84 /* UIView+Layout.swift */; };
 		D034FA50227130D4005F7D84 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034FA4F227130D4005F7D84 /* Shadow.swift */; };
 		D04D6824226FB1D40071D43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6823226FB1D40071D43F /* AppDelegate.swift */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA8E38D592B13A4CE5514DFE /* Pods_My_Dex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Dex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA71621A62251EA4F0CE715 /* Pods-My Dex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Dex.debug.xcconfig"; path = "Target Support Files/Pods-My Dex/Pods-My Dex.debug.xcconfig"; sourceTree = "<group>"; };
 		D034FA4D22712671005F7D84 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		D034FA4F227130D4005F7D84 /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		D04D6820226FB1D40071D43F /* My Dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +43,7 @@
 		D04D684922705A2F0071D43F /* PokedexCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCollectionController.swift; sourceTree = "<group>"; };
 		D04D684B22705A9D0071D43F /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		D04D684D22705B560071D43F /* PokedexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCell.swift; sourceTree = "<group>"; };
+		E7D13E3D6FFC251CF2F77DE8 /* Pods-My Dex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Dex.release.xcconfig"; path = "Target Support Files/Pods-My Dex/Pods-My Dex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +51,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0389E75DE6F90FD99FFF316 /* Pods_My_Dex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EDF7B6F72CBD7FACB8B8E93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA8E38D592B13A4CE5514DFE /* Pods_My_Dex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91A1640A05C447FD0656DB54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDA71621A62251EA4F0CE715 /* Pods-My Dex.debug.xcconfig */,
+				E7D13E3D6FFC251CF2F77DE8 /* Pods-My Dex.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D04D6817226FB1D40071D43F = {
 			isa = PBXGroup;
 			children = (
 				D04D6822226FB1D40071D43F /* My Dex */,
 				D04D6821226FB1D40071D43F /* Products */,
+				91A1640A05C447FD0656DB54 /* Pods */,
+				7EDF7B6F72CBD7FACB8B8E93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D04D6832226FB1D70071D43F /* Build configuration list for PBXNativeTarget "My Dex" */;
 			buildPhases = (
+				51E37372821E8FEE53D0394E /* [CP] Check Pods Manifest.lock */,
 				D04D681C226FB1D40071D43F /* Sources */,
 				D04D681D226FB1D40071D43F /* Frameworks */,
 				D04D681E226FB1D40071D43F /* Resources */,
+				2F13515EA8E153C514A7799D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,6 +230,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F13515EA8E153C514A7799D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My Dex/Pods-My Dex-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My Dex/Pods-My Dex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51E37372821E8FEE53D0394E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My Dex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D04D681C226FB1D40071D43F /* Sources */ = {
@@ -356,6 +430,7 @@
 		};
 		D04D6833226FB1D70071D43F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA71621A62251EA4F0CE715 /* Pods-My Dex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +449,7 @@
 		};
 		D04D6834226FB1D70071D43F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7D13E3D6FFC251CF2F77DE8 /* Pods-My Dex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
