@@ -15,10 +15,11 @@ class PokedexCollectionController: BaseCollectionView {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationItem.title = "My Dex"
-    collectionView.backgroundColor = .white
-    collectionView.register(PokedexCell.self, forCellWithReuseIdentifier: PokedexCell.reuseIdentifier)
-    fetchPokemon()
+    self.navigationItem.title = "My Dex"
+    self.collectionView.backgroundColor = .white
+    self.collectionView.register(PokedexCell.self, forCellWithReuseIdentifier: PokedexCell.reuseIdentifier)
+    self.extendedLayoutIncludesOpaqueBars = true
+    self.fetchPokemon()
   }
 }
 
@@ -54,7 +55,7 @@ extension PokedexCollectionController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = (collectionView.frame.width-(cvPadding*3)) / 2
     let height = round((width * 1.37614679) * 2) / 2
-    print("\(width) x \(height)")
+//    print("\(width) x \(height)")
     return .init(width: width, height: height)
   }
   

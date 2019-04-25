@@ -15,6 +15,7 @@ class PokedexNavigationController: UINavigationController {
     navigationBar.barTintColor = .primaryRed
     navigationBar.barStyle = .black
     navigationBar.isTranslucent = false
+    navigationBar.isOpaque = true
     navigationBar.prefersLargeTitles = true
   }
 }

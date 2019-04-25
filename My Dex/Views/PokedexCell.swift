@@ -12,17 +12,20 @@ import SDWebImage
 class PokedexCell: UICollectionViewCell {
   var pokemon: Pokemon! {
     didSet {
+      print("\(pokemon.id.formattedPokemonId) - \(pokemon.name.capitalized)\t\t\(pokemon.types.count)")
+      imageView.sd_setImage(with: URL(string: pokemon.imageURL))
       nameLabel.text = pokemon.name.capitalized
       idLabel.text = "#\(pokemon.id.formattedPokemonId)"
-      imageView.sd_setImage(with: URL(string: pokemon.imageURL))
-      if pokemon.types.count > 1 {
+      if pokemon.types.count == 1 {
+        type1Label.text = pokemon.types[0].name.capitalized
+        type1Label.backgroundColor = pokemon.types[0].color
+        type2Label.text = ""
+        type2Label.backgroundColor = UIColor(white: 1, alpha: 0)
+      } else {
         type1Label.text = pokemon.types[1].name.capitalized
         type1Label.backgroundColor = pokemon.types[1].color
         type2Label.text = pokemon.types[0].name.capitalized
         type2Label.backgroundColor = pokemon.types[0].color
-      } else {
-        type1Label.text = pokemon.types[0].name.capitalized
-        type1Label.backgroundColor = pokemon.types[0].color
       }
     }
   }
