@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D034FA4E22712671005F7D84 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034FA4D22712671005F7D84 /* UIView+Layout.swift */; };
+		D034FA50227130D4005F7D84 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034FA4F227130D4005F7D84 /* Shadow.swift */; };
 		D04D6824226FB1D40071D43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D6823226FB1D40071D43F /* AppDelegate.swift */; };
 		D04D682B226FB1D70071D43F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04D682A226FB1D70071D43F /* Assets.xcassets */; };
 		D04D682E226FB1D70071D43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D682C226FB1D70071D43F /* LaunchScreen.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D034FA4D22712671005F7D84 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		D034FA4F227130D4005F7D84 /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		D04D6820226FB1D40071D43F /* My Dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04D6823226FB1D40071D43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D04D682A226FB1D70071D43F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		D04D683B226FBA700071D43F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D034FA4F227130D4005F7D84 /* Shadow.swift */,
+				D034FA4D22712671005F7D84 /* UIView+Layout.swift */,
 				D04D683C226FBA840071D43F /* ReuseIdentifying.swift */,
 				D04D6842226FC3760071D43F /* MiscExtensions.swift */,
 			);
@@ -209,8 +215,10 @@
 				D04D683F226FBBD80071D43F /* Pokemon.swift in Sources */,
 				D04D684E22705B560071D43F /* PokedexCell.swift in Sources */,
 				D04D684A22705A2F0071D43F /* PokedexCollectionController.swift in Sources */,
+				D034FA4E22712671005F7D84 /* UIView+Layout.swift in Sources */,
 				D04D684C22705A9D0071D43F /* BaseCollectionView.swift in Sources */,
 				D04D683D226FBA840071D43F /* ReuseIdentifying.swift in Sources */,
+				D034FA50227130D4005F7D84 /* Shadow.swift in Sources */,
 				D04D6824226FB1D40071D43F /* AppDelegate.swift in Sources */,
 				D04D6846226FC60D0071D43F /* PokeApi.swift in Sources */,
 			);

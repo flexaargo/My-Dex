@@ -9,7 +9,10 @@
 import UIKit
 
 class PokedexCollectionController: BaseCollectionView {
-  var pokedexEntries = [Pokemon]()
+  private let cvPadding: CGFloat = 16
+  
+  private var pokedexEntries = [Pokemon]()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationItem.title = "My Dex"
@@ -48,7 +51,18 @@ extension PokedexCollectionController {
 }
 
 extension PokedexCollectionController: UICollectionViewDelegateFlowLayout {
-//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//    return .init(width: 100, height: 100)
-//  }
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let width = (collectionView.frame.width-(cvPadding*3)) / 2
+    let height = round((width * 1.37614679) * 2) / 2
+    print("\(width) x \(height)")
+    return .init(width: width, height: height)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return 16
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    return .init(top: cvPadding, left: cvPadding, bottom: 0, right: cvPadding)
+  }
 }

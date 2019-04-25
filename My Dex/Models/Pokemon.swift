@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alex Fargo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Pokemon {
   let name: String
@@ -60,6 +60,50 @@ extension Pokemon: Decodable {
 struct Type {
   let name: String
   let url: String
+  var color: UIColor? {
+    get {
+      switch self.name {
+      case "normal":
+        return .typeNormal
+      case "fire":
+        return .typeFire
+      case "water":
+        return .typeWater
+      case "electric":
+        return .typeElectric
+      case "grass":
+        return .typeGrass
+      case "ice":
+        return .typeIce
+      case "fighting":
+        return .typeFighting
+      case "poison":
+        return .typePoison
+      case "ground":
+        return .typeGround
+      case "flying":
+        return .typeFlying
+      case "psychic":
+        return .typePsychic
+      case "bug":
+        return .typeBug
+      case "rock":
+        return .typeRock
+      case "ghost":
+        return .typeGhost
+      case "dragon":
+        return .typeDragon
+      case "dark":
+        return .typeDark
+      case "steel":
+        return .typeSteel
+      case "fairy":
+        return .typeFairy
+      default:
+        return nil
+      }
+    }
+  }
 }
 
 extension Type: Decodable {
