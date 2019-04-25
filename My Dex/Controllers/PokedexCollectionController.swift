@@ -116,6 +116,10 @@ extension PokedexCollectionController: UICollectionViewDelegateFlowLayout {
 
 // MARK: SearchBar
 extension PokedexCollectionController: UISearchControllerDelegate {
+  func willPresentSearchController(_ searchController: UISearchController) {
+    navigationItem.hidesSearchBarWhenScrolling = false
+  }
+  
   func didPresentSearchController(_ searchController: UISearchController) {
     searchActive = true
   }
@@ -124,6 +128,7 @@ extension PokedexCollectionController: UISearchControllerDelegate {
 extension PokedexCollectionController: UISearchBarDelegate {
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     searchActive = false
+    navigationItem.hidesSearchBarWhenScrolling = true
     filteredPokedexEntries = [Pokemon]()
     collectionView.reloadData()
 //    self.dismiss(animated: true, completion: nil)
